@@ -14,7 +14,7 @@ Traveller.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    traveller_name: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },

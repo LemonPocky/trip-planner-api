@@ -13,6 +13,6 @@ app.use(routes);
 
 // TODO: turn on connection to db and server. Change to { force: false } once the
 // models are implemented correctly to avoid data loss.
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log(`🔴 Server listening on port ${PORT}`));
 });

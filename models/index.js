@@ -4,12 +4,12 @@ const Trip = require("./Trip");
 
 // TODO: Setup many-to-many relationship
 Traveller.belongsToMany(Location, {
-  through: Trip,
+  through: {model: Trip, unique: false},
   onDelete: 'CASCADE',
 });
 Location.belongsToMany(Traveller, {
-  through: Trip,
-  onDelete: 'CASCADE',
+  through: { model: Trip, unique: false },
+  onDelete: "CASCADE",
 });
 
 module.exports = { Traveller, Location, Trip };

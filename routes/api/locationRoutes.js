@@ -1,7 +1,9 @@
 const router = require("express").Router();
 
 // TODO: GET all locations
-router.get("/", async (req, res) => {});
+router.get("/", async (req, res) => {
+    
+});
 
 // TODO: GET a single location
 router.get("/:id", async (req, res) => {});

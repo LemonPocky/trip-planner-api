@@ -1,7 +1,15 @@
 const router = require("express").Router();
+const { Location } = require('../../models');
 
 // TODO: GET all locations
-router.get("/", async (req, res) => {});
+router.get("/", async (req, res) => {
+  try {
+    const locationData = await Location.findAll();
+    res.status(200).json(locationData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 // TODO: GET a single location
 router.get("/:id", async (req, res) => {});

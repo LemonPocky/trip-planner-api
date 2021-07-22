@@ -19,14 +19,6 @@ Location.init(
       allowNull: false,
     },
 
-    traveller_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'Traveller',
-        key: 'id',
-
-      },
-    },
   },
   {
     sequelize,

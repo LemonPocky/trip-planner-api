@@ -8,6 +8,7 @@ class Traveller extends Model {}
 Traveller.init(
   {
     // TODO: configure columns
+    
   },
   {
     sequelize,

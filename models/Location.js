@@ -8,6 +8,23 @@ class Location extends Model {}
 Location.init(
   {
     // TODO: configure columns
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    traveller_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Traveller',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
